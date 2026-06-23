@@ -104,6 +104,21 @@ JetBrains Mono).
 The site builds to a folder of plain static files (`/dist`) — **no Node server is needed
 on the host**. Pick whichever route suits you.
 
+### GitHub Pages (free, permanent — this repo is pre-configured for it)
+A GitHub Actions workflow (`.github/workflows/deploy.yml`) builds and publishes the site
+automatically. To switch it on:
+
+1. Create an empty **public** repo at <https://github.com/new> (don't add a README/license).
+2. Push this folder to it — Windows: double-click **`publish-to-github.cmd`**, or run:
+   ```bash
+   git remote add origin https://github.com/<username>/<repo>.git
+   git push -u origin main
+   ```
+3. In the repo: **Settings → Pages → Source → "GitHub Actions"**.
+
+Live at `https://<username>.github.io/<repo>/` within ~2 minutes; every `git push`
+redeploys. The `base` path auto-matches your repo name and `404.html` keeps routes working.
+
 ### A) Free, permanent URL — Vercel / Netlify (recommended)
 1. Go to [vercel.com](https://vercel.com) (or [netlify.com](https://netlify.com)) and sign
    in with GitHub/Google/email.
