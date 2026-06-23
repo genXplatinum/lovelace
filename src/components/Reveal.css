@@ -1,0 +1,16 @@
+.reveal--up,
+.reveal--fade {
+  transition: opacity 0.95s var(--ease-out), transform 0.95s var(--ease-out);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: transform, opacity;
+}
+.reveal--up { transform: translateY(var(--reveal-y, 26px)); }
+.reveal--up.is-in,
+.reveal--fade.is-in { transform: none; }
+
+.reveal--mask {
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 1.05s var(--ease-out);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+.reveal--mask.is-in { clip-path: inset(0 0 -10% 0); }

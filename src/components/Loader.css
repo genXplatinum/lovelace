@@ -1,0 +1,42 @@
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 10001;
+  background: var(--paper);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loader__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.4rem;
+  width: min(420px, 78vw);
+  color: var(--ink);
+}
+.loader__inner > svg { color: var(--ink); }
+.loader__meta {
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.loader__num {
+  font-size: clamp(1.9rem, 7vw, 2.8rem);
+  color: var(--ink);
+  letter-spacing: 0;
+  text-transform: none;
+  font-weight: 500;
+}
+.loader__bar { width: 100%; height: 1px; background: var(--line-2); overflow: hidden; }
+.loader__bar-fill {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: var(--signal);
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.loader__sub { align-self: flex-start; }

@@ -1,0 +1,73 @@
+.footer {
+  background: var(--ink);
+  color: var(--paper);
+  position: relative;
+  z-index: 2;
+  padding-block: clamp(4rem, 8vw, 7.5rem) clamp(2rem, 4vw, 3rem);
+}
+.footer .hairline { background: rgba(255, 255, 255, 0.14); }
+.footer .eyebrow { color: rgba(255, 255, 255, 0.6); }
+.footer .mono { color: rgba(255, 255, 255, 0.5); }
+
+.footer__cta { padding-bottom: clamp(3rem, 7vw, 6rem); }
+.footer__cta-title {
+  font-size: var(--t-h1);
+  color: var(--paper);
+  margin: 0.45em 0 0.55em;
+  max-width: 15ch;
+}
+.footer__mail {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(1.4rem, 5vw, 2.6rem);
+  letter-spacing: -0.02em;
+  color: var(--paper);
+  transition: color 0.4s var(--ease-out);
+}
+.footer__mail svg { transition: transform 0.4s var(--ease-out); }
+.footer__mail:hover { color: #8a98ff; }
+.footer__mail:hover svg { transform: translate(4px, -4px); }
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1.7fr repeat(4, 1fr);
+  gap: var(--gutter);
+  padding-block: clamp(2.5rem, 5vw, 4rem);
+}
+.footer__brand { display: flex; flex-direction: column; gap: 1.1rem; }
+.footer__brand svg { color: var(--paper); }
+.footer__tag { color: rgba(255, 255, 255, 0.6); max-width: 26ch; font-size: var(--t-sm); }
+
+.footer__col { display: flex; flex-direction: column; gap: 0.7rem; align-items: flex-start; }
+.footer__col-head { margin-bottom: 0.4rem; color: rgba(255, 255, 255, 0.4) !important; }
+.footer__link {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: var(--t-sm);
+  transition: color 0.3s var(--ease-out);
+  width: fit-content;
+}
+.footer__link:hover { color: #8a98ff; }
+.footer__link--static { cursor: default; }
+.footer__link--static:hover { color: rgba(255, 255, 255, 0.82); }
+
+.footer__colophon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  flex-wrap: wrap;
+  padding-top: clamp(2rem, 4vw, 3rem);
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+.footer__colophon-mid { flex: 1; text-align: center; min-width: 14rem; }
+.footer__top { color: rgba(255, 255, 255, 0.82); }
+.footer__top:hover { color: #8a98ff; }
+
+@media (max-width: 900px) {
+  .footer__grid { grid-template-columns: 1fr 1fr; gap: 2rem var(--gutter); }
+  .footer__brand { grid-column: 1 / -1; }
+  .footer__colophon-mid { order: 3; flex-basis: 100%; text-align: left; }
+}

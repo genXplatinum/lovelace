@@ -1,0 +1,64 @@
+import { useEffect, useRef, useState } from 'react';
+import { gsap } from '../lib/gsap';
+import { Mark } from './Logo';
+import './Loader.css';
+
+/**
+ * First-load intro: a count from 000 to 100 and a signal bar, then the
+ * panel lifts away to reveal the hero. Respects reduced-motion.
+ */
+export default function Loader({ onComplete }) {
+  const root = useRef(null);
+  const num = useRef(null);
+  const cb = useRef(onComplete);
+  cb.current = onComplete;
+  const [hidden, setHidden] = useState(false);
+
+  useEffect(() => {
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const counter = { v: 0 };
+
+    const tl = gsap.timeline({
+      onComplete: () => {
+        setHidden(true);
+        cb.current?.();
+      },
+    });
+
+    if (reduced) {
+      if (num.current) num.current.textContent = '100';
+      tl.to(root.current, { autoAlpha: 0, duration: 0.4 }, 0.3);
+      return () => tl.kill();
+    }
+
+    tl.to(counter, {
+      v: 100,
+      duration: 1.5,
+      ease: 'power2.inOut',
+      onUpdate: () => {
+        if (num.current) num.current.textContent = String(Math.round(counter.v)).padStart(3, '0');
+      },
+    });
+    tl.fromTo('.loader__bar-fill', { scaleX: 0 }, { scaleX: 1, duration: 1.5, ease: 'power2.inOut' }, 0);
+    tl.to('.loader__inner', { autoAlpha: 0, duration: 0.45, ease: 'power2.in' }, '+=0.15');
+    tl.to(root.current, { yPercent: -100, duration: 0.95, ease: 'expo.inOut' }, '-=0.1');
+
+    return () => tl.kill();
+  }, []);
+
+  if (hidden) return null;
+
+  return (
+    <div ref={root} className="loader" role="presentation">
+      <div className="loader__inner">
+        <Mark size={42} />
+        <div className="loader__meta">
+          <span className="mono">Love Web Studios</span>
+          <span ref={num} className="loader__num mono">000</span>
+        </div>
+        <div className="loader__bar"><span className="loader__bar-fill" /></div>
+        <span className="mono loader__sub">Initialising studio · design, engineered</span>
+      </div>
+    </div>
+  );
+}
