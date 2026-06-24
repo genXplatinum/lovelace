@@ -9,7 +9,7 @@
     <title>Love Web Studios — Design, engineered.</title>
     <meta
       name="description"
-      content="Love Web Studios (LWS) is a design studio founded by a top-100 ethical hacker. We craft websites, brands and 3D experiences that are beautiful on the surface and engineered underneath."
+      content="Love Web Studios (LWS) is a design and 3D web studio founded by Lovepreet Singh — Founder & Managing Director of Five Rivers Inc. and a top-100 ethical hacker. We craft websites, brands and immersive 3D experiences that are beautiful on the surface and engineered underneath."
     />
 
     <!-- Open Graph -->
@@ -26,6 +26,42 @@
       href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
+
+    <meta property="og:site_name" content="Love Web Studios" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Structured data: helps Google understand the studio and its founder -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://genxplatinum.github.io/love-web-studios/#org",
+            "name": "Love Web Studios",
+            "alternateName": "LWS",
+            "url": "https://genxplatinum.github.io/love-web-studios/",
+            "description": "Design and 3D web studio crafting websites, brands and immersive experiences.",
+            "founder": { "@id": "https://genxplatinum.github.io/love-web-studios/#lovepreet-singh" }
+          },
+          {
+            "@type": "Person",
+            "@id": "https://genxplatinum.github.io/love-web-studios/#lovepreet-singh",
+            "name": "Lovepreet Singh",
+            "jobTitle": "Founder & Managing Director",
+            "worksFor": { "@id": "https://genxplatinum.github.io/love-web-studios/#org" },
+            "founder": { "@id": "https://genxplatinum.github.io/love-web-studios/#org" },
+            "description": "Serial technology entrepreneur, Founder & Managing Director of Five Rivers Inc., and one of the world's top 100 ethical hackers.",
+            "sameAs": [
+              "https://www.linkedin.com/in/fiverivers-founder/",
+              "https://www.instagram.com/misterlove.in"
+            ],
+            "knowsAbout": ["Cybersecurity", "Ethical Hacking", "Web Design", "Artificial Intelligence", "3D / WebGL"],
+            "award": ["Microsoft MVP", "Guinness World Records", "Fortune 40 Under 40", "Limca Book of Records"]
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

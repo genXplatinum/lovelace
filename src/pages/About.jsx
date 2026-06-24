@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import PageHeader from '../components/PageHeader';
 import Reveal from '../components/Reveal';
 import Avatar from '../components/Avatar';
@@ -10,7 +11,7 @@ const timeline = [
   { k: 'Age 6', t: 'Wrote his first lines of code.' },
   { k: 'Age 10', t: 'Designed and shipped his first website.' },
   { k: 'Age 15', t: 'Founded Five River Solutions.' },
-  { k: 'Today', t: 'Leads Five Rivers Inc. & Love Web Studios across London, Dubai and India.' },
+  { k: 'Today', t: 'Founder & MD of Five Rivers Inc. and founder of three startups — leading Love Web Studios across London, Dubai and India.' },
 ];
 
 const disclosures = ['Twitter', 'Facebook', 'Apple', 'PayPal', 'MIT', 'Harvard'];
@@ -25,6 +26,23 @@ function Mark2({ label }) {
 }
 
 export default function About() {
+  useEffect(() => {
+    const prevTitle = document.title;
+    const meta = document.querySelector('meta[name="description"]');
+    const prevDesc = meta ? meta.getAttribute('content') : null;
+    document.title = 'Lovepreet Singh — Founder & MD, Five Rivers Inc. | Love Web Studios';
+    if (meta) {
+      meta.setAttribute(
+        'content',
+        'Lovepreet Singh — serial entrepreneur, Founder & Managing Director of Five Rivers Inc., and one of the world’s top 100 ethical hackers. His story, ventures, net worth and recognition.'
+      );
+    }
+    return () => {
+      document.title = prevTitle;
+      if (meta && prevDesc != null) meta.setAttribute('content', prevDesc);
+    };
+  }, []);
+
   return (
     <>
       <PageHeader

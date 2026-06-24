@@ -169,15 +169,15 @@ export const stats = [
 /* ---------- Founder ---------- */
 export const founder = {
   name: 'Lovepreet Singh',
-  role: 'Founder & Creative Director',
+  role: 'Founder & Managing Director',
   short: 'Founder',
   photo: import.meta.env.BASE_URL + 'founder.jpg', // resolves at any base (GitHub Pages subfolder or root); place file at public/founder.jpg
   // Pulled from public profiles — verify / edit before launch.
   headline: 'From breaking the web to building it beautifully.',
   bio: [
-    'Lovepreet Singh founded Love Web Studios to answer a question most agencies never ask: what if the people designing your website also knew exactly how it could be attacked?',
-    'He started coding at six and shipped his first website at ten. At fifteen he founded Five River Solutions — now part of Five Rivers Incorporation, a London-based group spanning cybersecurity, AI and IoT with offices across India, London and Dubai.',
-    'Ranked among the world’s top 100 ethical hackers, he has responsibly disclosed vulnerabilities to Twitter, Facebook, Apple, PayPal, MIT and Harvard, and supported law enforcement and institutions on 15+ cyber-forensics cases.',
+    'Lovepreet Singh is a serial technology entrepreneur and the Founder & Managing Director of Five Rivers Inc. — a multinational technology group spanning cybersecurity, AI and IoT, with offices across India, London and Dubai. Love Web Studios is the design-and-engineering studio he built as the creative arm of that vision.',
+    'He wrote his first code at six, shipped his first website at ten, and launched his first company at fifteen. Three startups on, he is ranked among the world’s top 100 ethical hackers — a Microsoft MVP and Guinness World Records holder who has supported India’s Ministry of Defence, the CBI and state police on 15+ cyber-forensics cases.',
+    'Today, Lovepreet Singh’s net worth runs into the tens of millions, built across his ventures as he scales Five Rivers Inc. toward a billion-dollar valuation by 2030.',
   ],
   awards: [
     'Microsoft MVP',
