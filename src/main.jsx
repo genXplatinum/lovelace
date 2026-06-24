@@ -6,7 +6,7 @@ import './index.css';
 import App from './App.jsx';
 
 // Vite sets BASE_URL from `base` in vite.config. Strip the trailing slash so React
-// Router gets e.g. "/love-web-studios" (or undefined → root) as its basename, which
+// Router gets e.g. "/lovelace" (or undefined → root) as its basename, which
 // keeps routing correct when the site is served from a GitHub Pages subfolder.
 const basename = import.meta.env.BASE_URL.replace(/\/$/, '') || undefined;
 
