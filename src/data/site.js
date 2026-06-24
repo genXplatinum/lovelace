@@ -171,7 +171,7 @@ export const founder = {
   name: 'Lovepreet Singh',
   role: 'Founder & Creative Director',
   short: 'Founder',
-  photo: '/founder.jpg', // place your photo at public/founder.jpg — falls back to monogram if missing
+  photo: import.meta.env.BASE_URL + 'founder.jpg', // resolves at any base (GitHub Pages subfolder or root); place file at public/founder.jpg
   // Pulled from public profiles — verify / edit before launch.
   headline: 'From breaking the web to building it beautifully.',
   bio: [
