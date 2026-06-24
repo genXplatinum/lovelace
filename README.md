@@ -1,6 +1,6 @@
-# Love Web Studios (LWS)
+# Lovelace
 
-A 3D, scroll-driven, multi-page website for **Love Web Studios** — a design studio
+A 3D, scroll-driven, multi-page website for **Lovelace** — a design studio
 founded by Lovepreet Singh. Design direction: *“engineered elegance”* — a gallery-white
 editorial surface with a security-engineer's structural language (mono annotations,
 hairline grids, an inspector cursor) and a liquid-chrome signature object.
@@ -58,7 +58,7 @@ src/
       ChromeFlow.jsx   ← the liquid-chrome object
   pages/               ← Home, Work, Services, About, Contact (+ matching .css)
 public/
-  favicon.svg          ← the LWS reticle mark
+  favicon.svg          ← the Lovelace reticle mark
 ```
 
 ## Customise

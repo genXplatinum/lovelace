@@ -1,8 +1,8 @@
 @echo off
-title Love Web Studios
+title Lovelace
 cd /d "%~dp0"
 echo ============================================
-echo    LOVE WEB STUDIOS  -  local preview
+echo    LOVELACE  -  local preview
 echo ============================================
 echo.
 where node >nul 2>nul

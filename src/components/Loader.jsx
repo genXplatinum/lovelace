@@ -53,7 +53,7 @@ export default function Loader({ onComplete }) {
       <div className="loader__inner">
         <Mark size={42} />
         <div className="loader__meta">
-          <span className="mono">Love Web Studios</span>
+          <span className="mono">Lovelace</span>
           <span ref={num} className="loader__num mono">000</span>
         </div>
         <div className="loader__bar"><span className="loader__bar-fill" /></div>

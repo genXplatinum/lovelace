@@ -17,7 +17,7 @@ export default function Contact() {
 
   const submit = (e) => {
     e.preventDefault();
-    const subject = encodeURIComponent(`New project enquiry — ${form.name || 'LWS'}`);
+    const subject = encodeURIComponent(`New project enquiry — ${form.name || 'Lovelace'}`);
     const body = encodeURIComponent(
       `Name: ${form.name}\nEmail: ${form.email}\nProject type: ${form.type}\nBudget: ${form.budget}\n\n${form.message}`
     );

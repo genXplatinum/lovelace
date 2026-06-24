@@ -1,8 +1,8 @@
 @echo off
-title Publish Love Web Studios to GitHub
+title Publish Lovelace to GitHub
 cd /d "%~dp0"
 echo ================================================================
-echo     PUBLISH LOVE WEB STUDIOS TO GITHUB
+echo     PUBLISH LOVELACE TO GITHUB
 echo ================================================================
 echo.
 echo  STEP 1 - do this FIRST if you haven't already:

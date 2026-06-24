@@ -11,7 +11,7 @@ const timeline = [
   { k: 'Age 6', t: 'Wrote his first lines of code.' },
   { k: 'Age 10', t: 'Designed and shipped his first website.' },
   { k: 'Age 15', t: 'Founded Five River Solutions.' },
-  { k: 'Today', t: 'Founder & MD of Five Rivers Inc. and founder of three startups — leading Love Web Studios across London, Dubai and India.' },
+  { k: 'Today', t: 'Founder & MD of Five Rivers Inc. and founder of three startups — leading Lovelace across London, Dubai and India.' },
 ];
 
 const disclosures = ['Twitter', 'Facebook', 'Apple', 'PayPal', 'MIT', 'Harvard'];
@@ -30,7 +30,7 @@ export default function About() {
     const prevTitle = document.title;
     const meta = document.querySelector('meta[name="description"]');
     const prevDesc = meta ? meta.getAttribute('content') : null;
-    document.title = 'Lovepreet Singh — Founder & MD, Five Rivers Inc. | Love Web Studios';
+    document.title = 'Lovepreet Singh — Founder & MD, Five Rivers Inc. | Lovelace';
     if (meta) {
       meta.setAttribute(
         'content',
@@ -65,7 +65,7 @@ export default function About() {
           </Reveal>
           <div className="ab-intro__body">
             <Reveal as="p" delay={80}>
-              Love Web Studios began with a simple observation — the prettiest websites are often
+              Lovelace began with a simple observation — the prettiest websites are often
               the most fragile. Slow, bloated, quietly insecure. We build the opposite.
             </Reveal>
             <Reveal as="p" delay={160}>

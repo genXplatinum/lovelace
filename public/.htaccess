@@ -1,4 +1,4 @@
-# Love Web Studios — Apache config for shared hosting (Hostinger, cPanel, etc.)
+# Lovelace — Apache config for shared hosting (Hostinger, cPanel, etc.)
 # Upload the CONTENTS of the /dist folder to public_html; this file rides along.
 
 # 1) Single-page-app routing: send all unknown paths to index.html so /work,

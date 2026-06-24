@@ -1,5 +1,5 @@
 /**
- * LWS brand mark — an inspector "reticle" (viewfinder + signal dot).
+ * Lovelace brand mark — an inspector "reticle" (viewfinder + signal dot).
  * Echoes the custom cursor: a studio that inspects before it builds.
  */
 export function Mark({ size = 34, className = '' }) {
@@ -24,11 +24,11 @@ export function Mark({ size = 34, className = '' }) {
 
 export default function Logo({ compact = false, size = 30 }) {
   return (
-    <span className="logo" aria-label="Love Web Studios">
+    <span className="logo" aria-label="Lovelace">
       <Mark size={size} className="logo__mark" />
       {!compact && (
         <span className="logo__word">
-          Love&nbsp;Web&nbsp;Studios
+          Lovelace
         </span>
       )}
     </span>
