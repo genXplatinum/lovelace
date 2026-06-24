@@ -1,12 +1,15 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import { existsSync } from 'node:fs'
 
-// When building on GitHub Actions, serve under the repo name so assets resolve at
-// https://<user>.github.io/<repo>/. User/org sites (<name>.github.io) and every other
-// host (local dev, Vercel, Netlify, Hostinger) stay at the root "/".
+// If a custom domain is configured (public/CNAME present), the site is served at the
+// domain ROOT → base '/'. Otherwise, on GitHub Actions, serve under the repo subpath
+// (https://<user>.github.io/<repo>/). Everywhere else (local dev) stays at root.
+const hasCustomDomain = existsSync('public/CNAME')
 const repo = process.env.GITHUB_REPOSITORY?.split('/')[1] ?? ''
-const base =
-  process.env.GITHUB_ACTIONS && repo && !repo.endsWith('.github.io')
+const base = hasCustomDomain
+  ? '/'
+  : process.env.GITHUB_ACTIONS && repo && !repo.endsWith('.github.io')
     ? `/${repo}/`
     : '/'
 
