@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import Reveal from '../components/Reveal';
 import Avatar from '../components/Avatar';
 import Interstitial from '../components/Interstitial';
+import CohortMock from '../components/CohortCard';
 import { Mark } from '../components/Logo';
 import {
   site,
@@ -125,11 +126,19 @@ export default function Home() {
               {projects.slice(0, 4).map((p, i) => (
                 <Reveal key={p.id} delay={(i % 2) * 80} className="wp__item">
                   <Link to="/work" className="wp__link" data-cursor>
-                    <div className="wp__visual" style={{ '--accent': p.accent }}>
-                      <span className="wp__num">{p.index}</span>
-                      <span className="wp__cat mono">{p.category}</span>
-                      <span className="wp__view mono">View case ↗</span>
-                    </div>
+                    {p.visual === 'cohort' ? (
+                      <div className="wp__visual wp__visual--cohort" style={{ '--accent': p.accent }}>
+                        <span className="wp__cat mono">{p.category}</span>
+                        <CohortMock />
+                        <span className="wp__view mono">View case ↗</span>
+                      </div>
+                    ) : (
+                      <div className="wp__visual" style={{ '--accent': p.accent }}>
+                        <span className="wp__num">{p.index}</span>
+                        <span className="wp__cat mono">{p.category}</span>
+                        <span className="wp__view mono">View case ↗</span>
+                      </div>
+                    )}
                     <div className="wp__meta">
                       <h3 className="wp__title">{p.title}</h3>
                       <span className="wp__year mono">{p.year}</span>

@@ -1,0 +1,37 @@
+/* Shared mini-dashboard visual for the Digithrive CRM showcase card. */
+.cohort {
+  width: 100%;
+  max-width: 380px;
+  margin-inline: auto;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 26px 50px -32px rgba(14, 15, 18, 0.55);
+  overflow: hidden;
+  font-family: var(--font-mono);
+  transition: transform 0.6s var(--ease-out);
+}
+.cohort__top {
+  display: flex; align-items: center; gap: 6px;
+  padding: 8px 11px; background: var(--paper-2); border-bottom: 1px solid var(--line);
+}
+.cohort__top span { width: 6px; height: 6px; border-radius: 50%; background: var(--line-2); }
+.cohort__top em { margin-left: auto; font-style: normal; font-size: 9px; letter-spacing: 0.06em; color: var(--slate); }
+.cohort__body { padding: 13px; display: flex; flex-direction: column; gap: 11px; }
+.cohort__tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
+.cohort__tile {
+  border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 8px 9px; display: flex; flex-direction: column; gap: 7px;
+}
+.cohort__k { font-size: 8.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--slate); }
+.cohort__meter { height: 5px; background: var(--paper-3); border-radius: 100px; overflow: hidden; }
+.cohort__meter i { display: block; height: 100%; background: var(--accent); }
+.cohort__meter--ink i { background: var(--ink); }
+.cohort__chart { display: flex; align-items: flex-end; gap: 5px; height: 46px; }
+.cohort__chart span { flex: 1; background: var(--paper-3); border-radius: 2px 2px 0 0; }
+.cohort__chart .is-accent { background: var(--accent); }
+.cohort__foot { display: flex; align-items: center; justify-content: space-between; font-size: 9.5px; color: var(--slate); }
+.cohort__pill {
+  color: var(--accent); font-size: 9px; padding: 2px 8px; border-radius: 100px;
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+}
