@@ -90,11 +90,24 @@ export const services = [
   },
 ];
 
-/* ---------- Selected work (placeholders — swap with real cases) ---------- */
+/* ---------- Selected work (Digithrive is a real, shipped build; the rest are samples) ---------- */
 export const projects = [
   {
-    id: 'meridian',
+    id: 'digithrive',
     index: '01',
+    title: 'Digithrive Institute',
+    category: 'Web App · CRM',
+    year: '2026',
+    blurb:
+      'A complete student-management CRM for a digital-marketing academy — students, fees, EMI plans, leads and attendance in one fast dashboard, plus a bank-statement reconciler that reads any statement and auto-matches Razorpay payments to the right student.',
+    tags: ['React 19', 'Web app', 'Fintech UX', 'Dashboards'],
+    accent: '#1e37f0',
+    visual: 'cohort',
+    note: 'Featured build · 2026',
+  },
+  {
+    id: 'meridian',
+    index: '02',
     title: 'Meridian Capital',
     category: 'Web · Brand',
     year: '2025',
@@ -104,7 +117,7 @@ export const projects = [
   },
   {
     id: 'kintsugi',
-    index: '02',
+    index: '03',
     title: 'Kintsugi Studio',
     category: '3D · WebGL',
     year: '2025',
@@ -114,7 +127,7 @@ export const projects = [
   },
   {
     id: 'aster',
-    index: '03',
+    index: '04',
     title: 'Aster Botanics',
     category: 'E-commerce',
     year: '2024',
@@ -124,7 +137,7 @@ export const projects = [
   },
   {
     id: 'halcyon',
-    index: '04',
+    index: '05',
     title: 'Halcyon Festival',
     category: 'Web · Identity',
     year: '2024',
@@ -134,7 +147,7 @@ export const projects = [
   },
   {
     id: 'volt',
-    index: '05',
+    index: '06',
     title: 'Volt Mobility',
     category: 'Web · Product',
     year: '2025',
@@ -144,7 +157,7 @@ export const projects = [
   },
   {
     id: 'atlas',
-    index: '06',
+    index: '07',
     title: 'Atlas Labs',
     category: 'Web · 3D',
     year: '2024',
