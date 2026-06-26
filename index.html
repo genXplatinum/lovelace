@@ -12,6 +12,12 @@
       content="Lovelace is a design and 3D web studio founded by Lovepreet Singh — Founder & Managing Director of Five Rivers Inc. and a top-100 ethical hacker. We craft websites, brands and immersive 3D experiences that are beautiful on the surface and engineered underneath."
     />
 
+    <meta name="author" content="Lovepreet Singh" />
+    <link rel="canonical" href="https://lovelace.co.in/" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="keywords" content="Lovelace, design studio, web design, 3D web, WebGL, branding, brand identity, creative studio, website development, Lovepreet Singh, lovelace.co.in" />
+
     <!-- Open Graph -->
     <meta property="og:title" content="Lovelace — Design, engineered." />
     <meta
@@ -29,7 +35,18 @@
 
     <meta property="og:site_name" content="Lovelace" />
     <meta property="og:url" content="https://lovelace.co.in/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content="https://lovelace.co.in/og.png" />
+    <meta property="og:image:secure_url" content="https://lovelace.co.in/og.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Lovelace — Design, engineered. Websites, brands and 3D experiences." />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Lovelace — Design, engineered." />
+    <meta name="twitter:description" content="Websites, brands and immersive 3D experiences. Beautiful on the surface, engineered underneath." />
+    <meta name="twitter:image" content="https://lovelace.co.in/og.png" />
+    <meta name="twitter:image:alt" content="Lovelace — Design, engineered." />
 
     <!-- Structured data: helps Google understand the studio and its founder -->
     <script type="application/ld+json">
@@ -37,12 +54,27 @@
         "@context": "https://schema.org",
         "@graph": [
           {
+            "@type": "WebSite",
+            "@id": "https://lovelace.co.in/#website",
+            "url": "https://lovelace.co.in/",
+            "name": "Lovelace",
+            "inLanguage": "en",
+            "publisher": { "@id": "https://lovelace.co.in/#org" }
+          },
+          {
             "@type": "Organization",
             "@id": "https://lovelace.co.in/#org",
             "name": "Lovelace",
             "alternateName": "Lovelace Studio",
             "url": "https://lovelace.co.in/",
+            "logo": "https://lovelace.co.in/og.png",
+            "image": "https://lovelace.co.in/og.png",
             "description": "Design and 3D web studio crafting websites, brands and immersive experiences.",
+            "areaServed": "Worldwide",
+            "sameAs": [
+              "https://www.linkedin.com/in/fiverivers-founder/",
+              "https://www.instagram.com/misterlove.in"
+            ],
             "founder": { "@id": "https://lovelace.co.in/#lovepreet-singh" }
           },
           {
@@ -50,6 +82,8 @@
             "@id": "https://lovelace.co.in/#lovepreet-singh",
             "name": "Lovepreet Singh",
             "jobTitle": "Founder & Managing Director",
+            "image": "https://lovelace.co.in/founder.jpg",
+            "url": "https://lovelace.co.in/about",
             "worksFor": { "@id": "https://lovelace.co.in/#org" },
             "founder": { "@id": "https://lovelace.co.in/#org" },
             "description": "Serial technology entrepreneur, Founder & Managing Director of Five Rivers Inc., and one of the world's top 100 ethical hackers.",

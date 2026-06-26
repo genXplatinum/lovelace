@@ -26,6 +26,9 @@ dist-ssr
 # Local tooling config
 .claude/
 
+# Local OG-image render sources (the built og.png lives in public/ and IS committed)
+_og/
+
 # Local env files
 .env
 .env.*
