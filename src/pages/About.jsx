@@ -4,6 +4,7 @@ import Reveal from '../components/Reveal';
 import Avatar from '../components/Avatar';
 import Interstitial from '../components/Interstitial';
 import { Mark } from '../components/Logo';
+import FounderGallery from '../components/FounderGallery';
 import { site, founder } from '../data/site';
 import './About.css';
 
@@ -103,6 +104,21 @@ export default function About() {
             <p>{founder.quote}</p>
             <cite className="mono">— {founder.name}, {founder.role}</cite>
           </Reveal>
+        </div>
+      </section>
+
+      {/* In the room — founder credibility gallery */}
+      <section className="section ab-room">
+        <div className="container">
+          <Mark2 label="In the room" />
+          <Reveal as="h2" className="ab-room__title">
+            From boardrooms to government — trusted where it counts.
+          </Reveal>
+          <Reveal as="p" className="ab-room__sub muted" delay={80}>
+            Beyond the studio, Lovepreet advises leadership teams, briefs government bodies and
+            builds partnerships across continents — the same rigour that goes into every build.
+          </Reveal>
+          <FounderGallery />
         </div>
       </section>
 

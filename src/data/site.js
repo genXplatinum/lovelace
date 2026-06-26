@@ -229,3 +229,13 @@ export const capabilities = [
   'Web Design', 'WebGL', 'Brand Identity', 'Three.js', 'UI/UX', 'Motion',
   'Shopify', 'SEO', 'Design Systems', 'Front-end', 'Art Direction', 'Performance',
 ];
+
+/* ---------- Founder "in the room" gallery (About page) ---------- */
+export const founderGallery = [
+  { src: 'media/g-keynote.jpg', caption: 'SecurityVerse 2025 — keynote' },
+  { src: 'media/g-boardroom.jpg', caption: 'Boardroom strategy session' },
+  { src: 'media/g-government.jpg', caption: 'Government engagement' },
+  { src: 'media/g-advisory.jpg', caption: 'One-on-one advisory' },
+  { src: 'media/g-dinner.jpg', caption: 'Partnerships, worldwide' },
+  { src: 'media/g-desk.jpg', caption: 'Heads-down, building' },
+];
