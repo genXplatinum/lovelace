@@ -1,11 +1,12 @@
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
 import Reveal from '../components/Reveal';
 import Avatar from '../components/Avatar';
 import Interstitial from '../components/Interstitial';
 import { Mark } from '../components/Logo';
 import FounderGallery from '../components/FounderGallery';
-import { site, founder } from '../data/site';
+import { site, founder, projects } from '../data/site';
 import './About.css';
 
 const timeline = [
@@ -119,6 +120,31 @@ export default function About() {
             builds partnerships across continents — the same rigour that goes into every build.
           </Reveal>
           <FounderGallery />
+        </div>
+      </section>
+
+      {/* Selected work */}
+      <section className="section ab-work">
+        <div className="container">
+          <Mark2 label="Selected work" />
+          <Reveal as="h2" className="ab-work__title">
+            Recent builds from the studio.
+          </Reveal>
+          <div className="ab-work__grid">
+            {projects.slice(0, 3).map((p, i) => (
+              <Reveal key={p.id} className="ab-work__card" delay={i * 80}>
+                <Link to="/work" className="ab-work__link" data-cursor style={{ '--accent': p.accent }}>
+                  <span className="ab-work__cat mono">{p.category}</span>
+                  <h3 className="ab-work__name">{p.title}</h3>
+                  <p className="ab-work__blurb muted">{p.blurb}</p>
+                  <span className="ab-work__view mono">View work ↗</span>
+                </Link>
+              </Reveal>
+            ))}
+          </div>
+          <Reveal className="ab-work__all" delay={120}>
+            <Link to="/work" className="btn btn--ghost">All projects <span className="btn__dot" /></Link>
+          </Reveal>
         </div>
       </section>
 
