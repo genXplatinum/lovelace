@@ -3,6 +3,7 @@ import PageHeader from '../components/PageHeader';
 import Reveal from '../components/Reveal';
 import Interstitial from '../components/Interstitial';
 import CohortMock from '../components/CohortCard';
+import PetvetMock from '../components/PetvetCard';
 import { projects } from '../data/site';
 import './Work.css';
 
@@ -32,10 +33,10 @@ export default function Work() {
                 className={`work__row ${i % 2 ? 'work__row--rev' : ''}`}
                 variant="up"
               >
-                {p.visual === 'cohort' ? (
-                  <div className="work__visual work__visual--cohort" style={{ '--accent': p.accent }} data-cursor>
+                {p.visual === 'cohort' || p.visual === 'petvet' ? (
+                  <div className={`work__visual work__visual--${p.visual}`} style={{ '--accent': p.accent }} data-cursor>
                     <span className="work__cat mono">{p.category}</span>
-                    <CohortMock />
+                    {p.visual === 'cohort' ? <CohortMock /> : <PetvetMock />}
                     <span className="work__soon mono">{p.note}</span>
                   </div>
                 ) : (

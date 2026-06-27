@@ -3,6 +3,7 @@ import Reveal from '../components/Reveal';
 import Avatar from '../components/Avatar';
 import Interstitial from '../components/Interstitial';
 import CohortMock from '../components/CohortCard';
+import PetvetMock from '../components/PetvetCard';
 import { Mark } from '../components/Logo';
 import {
   site,
@@ -126,10 +127,10 @@ export default function Home() {
               {projects.slice(0, 4).map((p, i) => (
                 <Reveal key={p.id} delay={(i % 2) * 80} className="wp__item">
                   <Link to="/work" className="wp__link" data-cursor>
-                    {p.visual === 'cohort' ? (
-                      <div className="wp__visual wp__visual--cohort" style={{ '--accent': p.accent }}>
+                    {p.visual === 'cohort' || p.visual === 'petvet' ? (
+                      <div className={`wp__visual wp__visual--${p.visual}`} style={{ '--accent': p.accent }}>
                         <span className="wp__cat mono">{p.category}</span>
-                        <CohortMock />
+                        {p.visual === 'cohort' ? <CohortMock /> : <PetvetMock />}
                         <span className="wp__view mono">View case ↗</span>
                       </div>
                     ) : (

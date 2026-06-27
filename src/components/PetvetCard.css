@@ -1,0 +1,86 @@
+/* Mini landing-page visual for the Petvet Care showcase card. */
+.pv {
+  width: 100%;
+  max-width: 380px;
+  margin-inline: auto;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 26px 50px -32px rgba(14, 15, 18, 0.55);
+  overflow: hidden;
+  transition: transform 0.6s var(--ease-out);
+}
+
+.pv__top {
+  display: flex; align-items: center; gap: 6px;
+  padding: 8px 11px; background: var(--paper-2); border-bottom: 1px solid var(--line);
+}
+.pv__top span { width: 6px; height: 6px; border-radius: 50%; background: var(--line-2); }
+.pv__top em {
+  margin-left: auto; font-style: normal; font-size: 9px;
+  letter-spacing: 0.06em; color: var(--slate);
+}
+
+/* Mini hero stage */
+.pv__stage {
+  position: relative;
+  height: 156px;
+  background:
+    radial-gradient(70% 60% at 82% 6%, rgba(255, 201, 60, 0.55), transparent 60%),
+    linear-gradient(180deg, #BFE6FF 0%, #E8F6FF 52%, #FFF8EC 100%);
+  overflow: hidden;
+}
+
+/* Marigold garland */
+.pv__garland {
+  position: absolute; top: 0; left: 0; right: 0;
+  display: flex; justify-content: space-between;
+  padding: 0 7px;
+}
+.pv__garland i {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--accent, #FF8A00);
+  margin-top: 2px;
+}
+.pv__garland i:nth-child(even) { background: #E5407A; margin-top: 6px; }
+
+/* Sun */
+.pv__sun {
+  position: absolute; top: 14px; right: 16px;
+  width: 24px; height: 24px; border-radius: 50%;
+  background: #FFC93C; box-shadow: 0 0 0 4px rgba(255, 201, 60, 0.35);
+}
+
+/* Headline + CTA */
+.pv__copy {
+  position: absolute; top: 30px; left: 14px;
+  display: flex; flex-direction: column; gap: 6px; width: 52%;
+}
+.pv__line { height: 7px; border-radius: 4px; background: rgba(46, 36, 24, 0.2); }
+.pv__line--lg { height: 11px; width: 92%; background: rgba(46, 36, 24, 0.34); }
+.pv__copy .pv__line:nth-child(2) { width: 66%; }
+.pv__cta {
+  margin-top: 5px; align-self: flex-start;
+  font-family: var(--font-mono); font-size: 9px; color: #fff;
+  background: #25D366; padding: 3px 10px; border-radius: 100px;
+}
+
+/* Grass + animals */
+.pv__ground {
+  position: absolute; left: 0; right: 0; bottom: 0; height: 50px;
+  background: #9FD06A; border-top: 2px solid #8AC257;
+  display: flex; align-items: flex-end; justify-content: center; gap: 14px;
+  padding-bottom: 6px;
+}
+.pv__svg { display: block; }
+.pv__bird { align-self: center; margin-bottom: 16px; }
+
+.pv__foot {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 10px 13px; font-size: 9.5px; color: var(--slate);
+}
+.pv__pill {
+  color: var(--accent, #FF8A00); font-size: 9px;
+  padding: 2px 8px; border-radius: 100px;
+  border: 1px solid color-mix(in srgb, var(--accent, #FF8A00) 38%, transparent);
+}
