@@ -90,11 +90,23 @@ export const services = [
   },
 ];
 
-/* ---------- Selected work (Digithrive is a real, shipped build; the rest are samples) ---------- */
+/* ---------- Selected work (Petvet Care & Digithrive are real, shipped builds; the rest are samples) ---------- */
 export const projects = [
   {
-    id: 'digithrive',
+    id: 'petvet',
     index: '01',
+    title: 'Petvet Care',
+    category: 'Web · 3D',
+    year: '2026',
+    blurb:
+      'A cheerful, cinematic 3D website for a home-visit veterinary doctor in Darbhanga. Low-poly cows, buffaloes, dogs, cats and birds in a sunlit courtyard, Mithila folk-art detailing, and one-tap WhatsApp booking.',
+    tags: ['React 19', 'Three.js / R3F', '3D', 'Local business'],
+    accent: '#FF8A00',
+    note: 'Featured build · 2026',
+  },
+  {
+    id: 'digithrive',
+    index: '02',
     title: 'Digithrive Institute',
     category: 'Web App · CRM',
     year: '2026',
@@ -107,7 +119,7 @@ export const projects = [
   },
   {
     id: 'meridian',
-    index: '02',
+    index: '03',
     title: 'Meridian Capital',
     category: 'Web · Brand',
     year: '2025',
@@ -117,7 +129,7 @@ export const projects = [
   },
   {
     id: 'kintsugi',
-    index: '03',
+    index: '04',
     title: 'Kintsugi Studio',
     category: '3D · WebGL',
     year: '2025',
@@ -127,7 +139,7 @@ export const projects = [
   },
   {
     id: 'aster',
-    index: '04',
+    index: '05',
     title: 'Aster Botanics',
     category: 'E-commerce',
     year: '2024',
@@ -137,7 +149,7 @@ export const projects = [
   },
   {
     id: 'halcyon',
-    index: '05',
+    index: '06',
     title: 'Halcyon Festival',
     category: 'Web · Identity',
     year: '2024',
@@ -147,7 +159,7 @@ export const projects = [
   },
   {
     id: 'volt',
-    index: '06',
+    index: '07',
     title: 'Volt Mobility',
     category: 'Web · Product',
     year: '2025',
@@ -157,7 +169,7 @@ export const projects = [
   },
   {
     id: 'atlas',
-    index: '07',
+    index: '08',
     title: 'Atlas Labs',
     category: 'Web · 3D',
     year: '2024',
