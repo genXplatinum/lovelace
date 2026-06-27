@@ -102,6 +102,7 @@ export const projects = [
       'A cheerful, cinematic 3D website for a home-visit veterinary doctor in Darbhanga. Low-poly cows, buffaloes, dogs, cats and birds in a sunlit courtyard, Mithila folk-art detailing, and one-tap WhatsApp booking.',
     tags: ['React 19', 'Three.js / R3F', '3D', 'Local business'],
     accent: '#FF8A00',
+    visual: 'petvet',
     note: 'Featured build · 2026',
   },
   {

@@ -151,7 +151,8 @@ body.is-ready .hero__scroll { opacity: 1; transition-delay: 0.75s; }
   opacity: 0; transform: translateY(6px); transition: opacity 0.4s var(--ease-out), transform 0.4s var(--ease-out);
 }
 .wp__link:hover .wp__view { opacity: 1; transform: none; }
-.wp__visual--cohort {
+.wp__visual--cohort,
+.wp__visual--petvet {
   display: grid; place-items: center; padding: clamp(1.4rem, 4vw, 3rem);
   background: linear-gradient(140deg, color-mix(in srgb, var(--accent) 12%, var(--paper-2)), var(--paper-2) 64%);
 }

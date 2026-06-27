@@ -51,9 +51,11 @@
 }
 .work__cta-title { font-size: clamp(2rem, 1rem + 5vw, 4.5rem); max-width: 16ch; }
 
-/* ---- Bespoke visual frame: Digithrive CRM (card art = components/CohortCard) ---- */
-.work__visual--cohort { display: grid; place-items: center; padding: clamp(1.1rem, 4vw, 2.4rem); }
-.work__visual--cohort:hover .cohort { transform: translateY(-4px); }
+/* ---- Bespoke visual frames: Digithrive CRM (CohortCard) & Petvet Care (PetvetCard) ---- */
+.work__visual--cohort,
+.work__visual--petvet { display: grid; place-items: center; padding: clamp(1.1rem, 4vw, 2.4rem); }
+.work__visual--cohort:hover .cohort,
+.work__visual--petvet:hover .pv { transform: translateY(-4px); }
 
 @media (max-width: 820px) {
   .work__row, .work__row--rev { grid-template-columns: 1fr; gap: 1.5rem; }
