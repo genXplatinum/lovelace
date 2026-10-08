@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { Mark } from './Logo';
 import { useLenis } from './SmoothScroll';
 import { site, nav, services } from '../data/site';
+import BusinessAddress from './BusinessAddress';
 import './Footer.css';
 
 export default function Footer() {
@@ -39,6 +40,7 @@ export default function Footer() {
             <p className="footer__tag">
               {site.short} designs and builds websites, web apps and brand identities.
             </p>
+            <BusinessAddress className="footer__address" />
           </div>
 
           <nav className="footer__col" aria-label="Pages">

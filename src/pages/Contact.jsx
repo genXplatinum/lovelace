@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import PageHeader from '../components/PageHeader';
+import BusinessAddress from '../components/BusinessAddress';
 import { site } from '../data/site';
 import './Contact.css';
 
@@ -92,6 +93,10 @@ export default function Contact() {
             <div>
               <span className="mono">Studios</span>
               <p>{site.locations.join(' / ')}</p>
+            </div>
+            <div>
+              <span className="mono">Business address</span>
+              <BusinessAddress id="business-address" />
             </div>
             <div>
               <span className="mono">Elsewhere</span>

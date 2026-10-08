@@ -88,11 +88,13 @@
 }
 
 .contact-page__aside a,
-.contact-page__aside p {
+.contact-page__aside p,
+.contact-page__aside address {
   margin: 0;
   color: var(--paper);
   font-size: 16px;
   font-weight: 700;
+  font-style: normal;
   overflow-wrap: anywhere;
 }
 
@@ -120,7 +122,7 @@
 
   .contact-page__aside {
     grid-column: 1 / -1;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 

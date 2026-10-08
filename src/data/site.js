@@ -3,17 +3,15 @@
    Edit copy, services, work and founder details here.
    ============================================================ */
 
+import { businessContact } from './contact.js';
+
 export const site = {
   name: 'Lovelace',
   short: 'Lovelace',
   est: '2024',
   locations: ['London', 'Dubai', 'India'],
-  email: 'lovepreetsinghmk10@gmail.com',
+  ...businessContact,
   phone: '+44 00 0000 0000', // TODO: replace with real number
-  social: [
-    { label: 'Instagram', href: 'https://www.instagram.com/misterlove.in' },
-    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/fiverivers-founder/' },
-  ],
   tagline: 'Design that works.',
   manifesto:
     'We design websites, brands and digital products. Design and development happen under one roof, so the work looks good, loads quickly and is easy to use.',

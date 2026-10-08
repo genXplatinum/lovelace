@@ -1,7 +1,9 @@
+import { businessContact } from './contact.js';
+
 export const SITE_URL = 'https://lovelace.co.in';
 export const SITE_NAME = 'Lovelace';
 export const DEFAULT_SOCIAL_IMAGE = `${SITE_URL}/og.png`;
-export const LAST_SIGNIFICANT_UPDATE = '2026-07-24';
+export const LAST_SIGNIFICANT_UPDATE = '2026-10-09';
 
 const sharedLinks = [
   { label: 'Studio and founder', href: '/about/' },
@@ -155,14 +157,21 @@ export const SEO_ROUTES = [
       highlights: [
         {
           heading: 'Start a project',
-          text: 'Email lovepreetsinghmk10@gmail.com with your goals, scope and preferred launch date.',
+          text: `Email ${businessContact.email} with your goals, scope and preferred launch date.`,
+        },
+        {
+          heading: 'Business address',
+          text: `${businessContact.businessName}, ${businessContact.address.street}, ${businessContact.address.city}, ${businessContact.address.region} ${businessContact.address.postalCode}, ${businessContact.address.country}.`,
         },
         {
           heading: 'Where we work',
           text: 'Lovelace works with organisations across London, Dubai, India and beyond.',
         },
       ],
-      links: sharedLinks,
+      links: [
+        ...sharedLinks,
+        ...businessContact.social.map(({ label, href }) => ({ label: `Lovelace on ${label}`, href })),
+      ],
     },
   },
 ];
@@ -213,7 +222,15 @@ const organization = {
   image: DEFAULT_SOCIAL_IMAGE,
   description:
     'Independent studio that designs and builds websites, web apps, brand identities and 3D web experiences.',
-  email: 'lovepreetsinghmk10@gmail.com',
+  email: businessContact.email,
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: businessContact.address.street,
+    addressLocality: businessContact.address.city,
+    addressRegion: businessContact.address.region,
+    postalCode: businessContact.address.postalCode,
+    addressCountry: businessContact.address.countryCode,
+  },
   areaServed: 'Worldwide',
   foundingDate: '2024',
   founder: { '@id': `${SITE_URL}/about/#lovepreet-singh` },
@@ -406,7 +423,7 @@ export function structuredDataForPath(pathname) {
       breadcrumb: { '@id': `${canonical}#breadcrumb` },
       mainEntity: {
         '@type': 'ContactPoint',
-        email: 'lovepreetsinghmk10@gmail.com',
+        email: businessContact.email,
         contactType: 'project enquiries',
         availableLanguage: ['English', 'Hindi', 'Punjabi'],
       },

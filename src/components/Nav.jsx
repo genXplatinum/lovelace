@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import Logo from './Logo';
 import { useLenis } from './SmoothScroll';
-import { nav } from '../data/site';
+import { nav, site } from '../data/site';
 import './Nav.css';
 
 export default function Nav() {
@@ -88,8 +88,8 @@ export default function Nav() {
           </ul>
           <div className="nav__overlay-foot">
             <span className="mono">Start a project</span>
-            <a href="mailto:lovepreetsinghmk10@gmail.com" className="nav__overlay-mail">
-              lovepreetsinghmk10@gmail.com
+            <a href={`mailto:${site.email}`} className="nav__overlay-mail">
+              {site.email}
             </a>
           </div>
         </div>
